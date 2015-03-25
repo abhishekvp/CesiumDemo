@@ -31,7 +31,7 @@ var CALIPSOdata1 = viewer.entities.add({
                                                                36.90,12.47, 2000000.0,
                                                                30.88,10.79, 2000000.0]),
         //minimumHeights : [100000.0, 100000.0, 100000.0, 100000.0],
-        material : "../CALIPSOData/1.png"
+        material : "/CALIPSOData/1.png"
     }
 });
 var CALIPSOdata2 = viewer.entities.add({
@@ -47,7 +47,7 @@ var CALIPSOdata2 = viewer.entities.add({
                                                                -11.91,1.18, 2000000.0,
                                                                -17.97,-0.17, 2000000.0]),
         //minimumHeights : [100000.0, 100000.0, 100000.0, 100000.0],
-        material : "../CALIPSOData/2.png"
+        material : "/CALIPSOData/2.png"
     }
 });
 
