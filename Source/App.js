@@ -160,16 +160,19 @@ var ellipsoid = scene.globe.ellipsoid;
             console.log("Min. Distance = "+minDist+"km.");
             if(minDist == dist0){
                 CALIPSOdata0.wall.show = true;
+                viewer.zoomTo(CALIPSOdata0);
                 CALIPSOdata1.wall.show = false;
                 CALIPSOdata2.wall.show = false;
               }
             else if (minDist == dist1){
                 CALIPSOdata1.wall.show = true;
+                viewer.zoomTo(CALIPSOdata1);
                 CALIPSOdata2.wall.show = false;
                 CALIPSOdata0.wall.show = false;
               }
             else {
                 CALIPSOdata2.wall.show = true;
+                viewer.zoomTo(CALIPSOdata2);
                 CALIPSOdata1.wall.show = false;
                 CALIPSOdata0.wall.show = false;
               }
