@@ -15,7 +15,7 @@ animation: false, // Only showing one day in this demo
 baseLayerPicker: false, // Only showing one layer in this demo
 timeline: false, // Only showing one day in this demo
 imageryProvider: provider, // The layer being shown
-sceneMode : Cesium.SceneMode.COLUMBUS_VIEW
+//sceneMode : Cesium.SceneMode.COLUMBUS_VIEW
 });
 
 var CalipsoData = {
