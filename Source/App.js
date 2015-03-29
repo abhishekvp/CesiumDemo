@@ -22,7 +22,7 @@ var CalipsoData = {
   "0": {
         "img": "/CesiumDemo/CALIPSOData/0.png",
         "coordinates": [
-            78.34,
+            77.34,
             48.92,
             72.23,
             35.42,
