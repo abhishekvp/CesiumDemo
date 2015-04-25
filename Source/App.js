@@ -153,9 +153,9 @@ var ellipsoid = scene.globe.ellipsoid;
             entity.label.show = true;
             entity.label.text = '(' + longitudeString + ', ' + latitudeString + ')';
             //Logic to decide which Lidar Profile to show
-            var dist0 = Math.acos(Math.sin(latitudeString) * Math.sin(CalipsoData["0"].coordinates[0]) + Math.cos(latitudeString) * Math.cos(CalipsoData["0"].coordinates[0]) * Math.cos(Math.abs(longitudeString - CalipsoData["0"].coordinates[1]))) * 6371;
-            var dist1 = Math.acos(Math.sin(latitudeString) * Math.sin(CalipsoData["1"].coordinates[0]) + Math.cos(latitudeString) * Math.cos(CalipsoData["1"].coordinates[0]) * Math.cos(Math.abs(longitudeString - CalipsoData["1"].coordinates[1]))) * 6371;
-            var dist2 = Math.acos(Math.sin(latitudeString) * Math.sin(CalipsoData["2"].coordinates[0]) + Math.cos(latitudeString) * Math.cos(CalipsoData["2"].coordinates[0]) * Math.cos(Math.abs(longitudeString - CalipsoData["2"].coordinates[1]))) * 6371;
+            var dist0 = Math.acos(Math.sin(toRadians(latitudeString)) * Math.sin(toRadians(CalipsoData["0"].coordinates[0])) + Math.cos(toRadians(latitudeString)) * Math.cos(toRadians(CalipsoData["0"].coordinates[0])) * Math.cos(toRadians(Math.abs(longitudeString - CalipsoData["0"].coordinates[1])))) * 6371;
+            var dist1 = Math.acos(Math.sin(toRadians(latitudeString)) * Math.sin(toRadians(CalipsoData["1"].coordinates[0])) + Math.cos(toRadians(latitudeString)) * Math.cos(toRadians(CalipsoData["1"].coordinates[0])) * Math.cos(toRadians(Math.abs(longitudeString - CalipsoData["1"].coordinates[1])))) * 6371;
+            var dist2 = Math.acos(Math.sin(toRadians(latitudeString)) * Math.sin(toRadians(CalipsoData["2"].coordinates[0])) + Math.cos(toRadians(latitudeString)) * Math.cos(toRadians(CalipsoData["2"].coordinates[0])) * Math.cos(toRadians(Math.abs(longitudeString - CalipsoData["2"].coordinates[1])))) * 6371;
             var minDist = Math.min(dist0,dist1,dist2);
             console.log("Min. Distance = "+minDist+"km.");
             if(minDist == dist0){
@@ -182,3 +182,7 @@ var ellipsoid = scene.globe.ellipsoid;
             entity.label.show = false;
         }
     }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
+
+function toRadians (angle) {
+  return angle * (Math.PI / 180);
+}
